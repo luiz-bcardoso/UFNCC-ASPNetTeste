@@ -1,0 +1,12 @@
+﻿@page
+@model UFNCC_DotNetASPTeste.Pages.ProdutoModel
+@{
+    ViewData["Title"] = "Cadastro de produtos";
+    ViewData["Teste"] = "Estou testando esta forma de dados";
+}
+
+<h2>@ViewData["Title"]</h2>
+<p>@ViewData["Teste"]</p>
+<p>Dados estáticos na página</p>
+<p>Nome produto: @Model.Descricao</p>
+<p>Preço: R$ @Model.Preco</p>

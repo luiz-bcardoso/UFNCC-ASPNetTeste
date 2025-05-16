@@ -2,11 +2,23 @@
 @model UFNCC_DotNetASPTeste.Pages.ProdutoModel
 @{
     ViewData["Title"] = "Cadastro de produtos";
-    ViewData["Teste"] = "Estou testando esta forma de dados";
 }
 
 <h2>@ViewData["Title"]</h2>
-<p>@ViewData["Teste"]</p>
-<p>Dados estáticos na página</p>
-<p>Nome produto: @Model.Descricao</p>
-<p>Preço: R$ @Model.Preco</p>
+<table  class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model.Produtos)
+        {
+            <tr>
+                <td>@produto.Descricao</td>
+                <td>@produto.Preco.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>

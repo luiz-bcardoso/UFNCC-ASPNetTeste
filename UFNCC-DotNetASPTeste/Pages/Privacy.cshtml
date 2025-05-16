@@ -4,5 +4,42 @@
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
+<style>
+    .run-from-cursor {
+            position: absolute; /* Makes the image move freely */
+            transition: transform 0.1s ease-out; /* Smooth transition effect */
+            will-change: transform; /* Improves performance during animation */
+        }
+</style>
+<p>pegue a capivara!!!</p>
+<img src="/images/capivara.png" alt="Capivara Image" class="img-fluid run-from-cursor" style="max-width: 60px;">
+    <script>
+        const image = document.querySelector('.run-from-cursor');
 
-<p>Use this page to detail your site's privacy policy.</p>
+        // Flag to track when the mouse is over the image
+        let isMouseOver = false;
+
+        // Function to make the image move away from the cursor
+        image.addEventListener('mouseenter', () => {
+            isMouseOver = true;
+        });
+
+        image.addEventListener('mouseleave', () => {
+            isMouseOver = false;
+            image.style.transform = 'translate(0, 0)'; // Reset image to original position
+        });
+
+        document.addEventListener('mousemove', (event) => {
+            if (isMouseOver) {
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+
+                // Random offset to move the image away from the cursor
+                const offsetX = (Math.random() * 200 - 100); // Random value between -100 and 100
+                const offsetY = (Math.random() * 200 - 100); // Random value between -100 and 100
+
+                // Apply the transformation (smooth movement)
+                image.style.transform = `translate(${mouseX + offsetX}px, ${mouseY + offsetY}px)`;
+            }
+        });
+    </script>

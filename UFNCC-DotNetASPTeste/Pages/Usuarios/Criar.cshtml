@@ -1,0 +1,29 @@
+﻿@page
+@model UFNCC_DotNetASPTeste.Pages.Usuarios.CriarModel
+@{
+    ViewData["Title"] = "Cadastrar Usuário";
+}
+<h2>@ViewData["Title"]</h2>
+<form method="post">
+    <div class="mb-3">
+        <label for="Id" class="form-label">ID: </label>
+        <input type="text" class="form-control" id="id" name="Usuario.Id" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="Usuario.Nome" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="Usuario.Email" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="senha" name="Usuario.Senha" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>

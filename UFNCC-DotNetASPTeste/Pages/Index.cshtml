@@ -3,8 +3,24 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<style>
+    .rainbow-text {
+        background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 
+    /* Add spinning animation */
+    .spin-on-hover {
+        transition: transform 0.6s ease; /* Smooth transition */
+    }
+
+    .spin-on-hover:hover {
+        transform: rotate(360deg); /* Spins the image 360 degrees */
+    }
+</style>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4 rainbow-text">Bem vinde a todis e todis!</h1>
+    <img src="~/images/GD-2.jpg" alt="GD-2 Image" class="img-fluid rounded shadow-lg spin-on-hover" style="max-width: 300px;">
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

@@ -1,1 +1,1 @@
-ID: 302, Nome: Juca, Senha: 3453fwert43 Email: JUCA@sdjasd.com
+320;Juca;nao tem senha;juquitas@gmail.com

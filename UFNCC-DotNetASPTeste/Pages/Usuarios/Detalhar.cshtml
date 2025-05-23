@@ -1,4 +1,23 @@
-﻿@page
+﻿@page "{id:int}"
 @model UFNCC_DotNetASPTeste.Pages.Usuarios.DetalharModel
 @{
+    ViewData["Title"] = "Detalhes do usuário";
 }
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <label>Id: </label>
+    <span>@Model.Usuario.Id</span>
+</div>
+<div>
+    <label>Nome: </label>
+    <span>@Model.Usuario.Nome</span>
+</div>
+<div>
+    <label>Senha: </label>
+    <span>@Model.Usuario.Senha</span>
+</div>
+<div>
+    <label>E-mail: </label>
+    <span>@Model.Usuario.Email</span>
+</div>

@@ -1,5 +1,33 @@
 ﻿@page
 @model UFNCC_DotNetASPTeste.Pages.Usuarios.IndexModel
 @{
+    ViewData["Title"] = "Cadastro de usuários";
 }
-<h1>Usuários</h1>
+<h2>@ViewData["Title"]</h2>
+<p>
+    <a class="btn btn-primary" asp-page="/Usuarios/Criar">Cadastrar novo usuário</a>
+    <a class="btn btn-primary" asp-page="/Usuarios/Criar">Cadastrar novo usuário</a>
+</p>
+<p>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Usuário</td>
+            <td>Senha</td>
+            <td>E-mail</td>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach(var user in Model.Usuarios)
+            {
+                <tr>
+                    <th>@user.Id</th>
+                    <th>@user.Nome</th>
+                    <th>@user.Senha</th>
+                    <th>@user.Email</th>
+                </tr>
+            }
+        </tbody>
+</table>
+</p>
